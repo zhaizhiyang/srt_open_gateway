@@ -9,8 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
-@Component
-public class RequestTimeFilter implements GatewayFilter, Ordered {
+public class AuthFilter implements GatewayFilter, Ordered {
 
     private static final Log log = LogFactory.getLog(GatewayFilter.class);
     private static final String REQUEST_TIME_BEGIN = "requestTimeBegin";

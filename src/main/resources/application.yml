@@ -4,7 +4,9 @@ spring:
       # 配置路由规则，访问当前网关的 /server/* 会转发请求到 http://localhost:9091/server/*
       routes:
         # 路由Id，需要唯一
-        - id: service-com.can.route
+        - id: service-com.srt.route
           uri: http://localhost:9091
           predicates:
             - Path=/*
+          filters:
+            - Auth
